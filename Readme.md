@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ольга Смирнова](https://up.htmlacademy.ru/adaptive/14/user/419685).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника` (https://htmlacademy.ru/intensive/adaptive)
 
 ---
 
