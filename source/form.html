@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="85" height="35" alt="Логотип Mishka">
+        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="85" height="35" alt="Логотип Mishka">
       </a>
       <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">Открыть меню</button>
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
@@ -31,19 +34,19 @@
     </header>
     <main class="page-main">
       <section class="order-form">
-        <h1 class="page-main__title page-main__title--inner">Вязание на заказ</h1>
+        <h1 class="page-main__title page-main__title--form">Вязание на заказ</h1>
         <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="order-form__form form-filter" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-filter__types">
             <h2 class="form-filter__title">Тип</h2>
             <ul class="form-filter__items item-form">
               <li class="item-form__radio">
-                <input class="item-form__radio-input" type="radio" id="interior" name="kind" value="item-interior" checked>
-                <label class="item-form__radio-label" for="interior">Аксессуар для интерьера</label>
+                <input class="visually-hidden" type="radio" id="interior" name="kind" value="item-interior" checked>
+                <label class="item-form__label" for="interior">Аксессуар для интерьера</label>
               </li>
               <li class="item-form__radio">
-                <input class="item-form__radio-input" type="radio" id="toy" name="kind" value="children-toy">
-                <label class="item-form__radio-label" for="toy">Детская игрушка</label>
+                <input class="visually-hidden" type="radio" id="toy" name="kind" value="children-toy">
+                <label class="item-form__label" for="toy">Детская игрушка</label>
               </li>
             </ul>
           </div>
@@ -51,28 +54,28 @@
             <h2 class="form-filter__title">Цвет</h2>
             <ul class="form-filter__items item-form">
               <li class="item-form__checkbox">
-                <input class="item-form__checkbox-input" type="checkbox" id="color-white" name="white" checked>
-                <label class="item-form__checkbox-label" for="color-white">Белый</label>
+                <input class="visually-hidden" type="checkbox" id="color-white" name="white" checked>
+                <label class="item-form__label" for="color-white">Белый</label>
               </li>
               <li class="item-form__checkbox">
-                <input class="item-form__checkbox-input" type="checkbox" id="color-gray" name="gray" checked>
-                <label class="item-form__checkbox-label" for="color-gray">Серый</label>
+                <input class="visually-hidden" type="checkbox" id="color-gray" name="gray" checked>
+                <label class="item-form__label" for="color-gray">Серый</label>
               </li>
               <li class="item-form__checkbox">
-                <input class="item-form__checkbox-input" type="checkbox" id="color-tiffany" name="tiffany">
-                <label class="item-form__checkbox-label" for="color-tiffany">«Тиффани»</label>
+                <input class="visually-hidden" type="checkbox" id="color-tiffany" name="tiffany">
+                <label class="item-form__label" for="color-tiffany">«Тиффани»</label>
               </li>
               <li class="item-form__checkbox">
-                <input class="item-form__checkbox-input" type="checkbox" id="color-black" name="black">
-                <label class="item-form__checkbox-label" for="color-black">Черный</label>
+                <input class="visually-hidden" type="checkbox" id="color-black" name="black">
+                <label class="item-form__label" for="color-black">Черный</label>
               </li>
               <li class="item-form__checkbox">
-                <input class="item-form__checkbox-input" type="checkbox" id="color-pink" name="pink">
-                <label class="item-form__checkbox-label" for="color-pink">Розовый</label>
+                <input class="visually-hidden" type="checkbox" id="color-pink" name="pink">
+                <label class="item-form__label" for="color-pink">Розовый</label>
               </li>
               <li class="item-form__checkbox">
-                <input class="item-form__checkbox-input" type="checkbox" id="color-orange" name="orange">
-                <label class="item-form__checkbox-label" for="color-orange">Оранжевый</label>
+                <input class="visually-hidden" type="checkbox" id="color-orange" name="orange">
+                <label class="item-form__label" for="color-orange">Оранжевый</label>
               </li>
             </ul>
           </div>
@@ -81,16 +84,16 @@
             <h2 class="form-filter__title">Фио</h2>
             <ul class="form-filter__items item-form">
               <li class="item-form__user">
-                <label class="item-form__user-label" for="your-name">Имя:</label>
-                <input class="item-form__user-input" type="text" id="your-name" name="user-name" placeholder="Введите ваше имя*" required>
+                <label class="item-form__label item-form__label-user" for="your-name">Имя:</label>
+                <input class="item-form__input" type="text" id="your-name" name="user-name" placeholder="Введите ваше имя*" required>
               </li>
               <li class="item-form__user">
-                <label class="item-form__user-label" for="your-surname">Фамилия:</label>
-                <input class="item-form__user-input" type="text" id="your-surname" name="user-surname" placeholder="Укажите фамилию*" required>
+                <label class="item-form__label item-form__label-user" for="your-surname">Фамилия:</label>
+                <input class="item-form__input" type="text" id="your-surname" name="user-surname" placeholder="Укажите фамилию*" required>
               </li>
               <li class="item-form__user">
-                <label class="item-form__user-label" for="your-patronymic">Отчество:</label>
-                <input class="item-form__user-input" type="text" id="your-patronymic" name="user-patronymic" placeholder="Отчество, если желаете">
+                <label class="item-form__label item-form__label-user" for="your-patronymic">Отчество:</label>
+                <input class="item-form__input" type="text" id="your-patronymic" name="user-patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
           </div>
@@ -98,20 +101,20 @@
             <h2 class="form-filter__title">Тел</h2>
             <div class="form-filter__items item-form">
               <label class="visually-hidden" for="your-tel">Тел</label>
-              <input class="item-form__tel" type="tel" id="your-tel" name="user-tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+              <input class="item-form__input" type="tel" id="your-tel" name="user-tel" placeholder="+7 ХХХ ХХ ХХ*" required>
             </div>
           </div>
           <div class="form-filter__email">
             <h2 class="form-filter__title">E-mail</h2>
             <div class="form-filter__items item-form">
               <label class="visually-hidden" for="your-email">E-mail</label>
-              <input class="item-form__email" type="email" id="your-email" name="user-email" placeholder="Ваш Email*" required>
+              <input class="item-form__input" type="email" id="your-email" name="user-email" placeholder="Ваш Email*" required>
             </div>
           </div>
           <div class="form-filter__comment">
             <h2 class="form-filter__title">Доп</h2>
             <div class="form-filter__items item-form">
-              <textarea class="item-form__textarea" name="text-review" id="text-review" rows="7" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="item-form__input item-form__input-textarea" name="text-review" id="text-review" rows="7" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </div>
         </form>
@@ -131,20 +134,31 @@
         <section class="page-footer__social">
           <ul class="page-footer__list social">
             <li class="social__item">
-              <a class="social__icon social__icon--instagram" href="#" title="Инстаграм">Мы в Инстаграме</a>
+              <a class="social__icon" href="#" title="Инстаграм">
+                <span class="visually-hidden">Мы в Инстаграме</span>
+                <svg class="social__icon-instagram" width="22" height="21">
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__icon social__icon--facebook" href="#" title="Фейсбук">Мы в Фейсбуке</a>
+              <a class="social__icon" href="#" title="Фейсбук">
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+                <svg class="social__icon-facebook" width="15" height="28">
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__icon social__icon--twitter" href="#" title="Твиттер">Мы в Твиттере</a>
+              <a class="social__icon" href="#" title="Твиттер">
+                <span class="visually-hidden">Мы в Твиттере</span>
+                <svg class="social__icon-twitter" width="23" height="20">
+                </svg>
+              </a>
             </li>
           </ul>
         </section>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML Academy</a>
-        </div>
+        <p class="page-footer__copyright copyright">
+          <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">Разработано</a>
+        </p>
       </div>
     </footer>
   </body>
