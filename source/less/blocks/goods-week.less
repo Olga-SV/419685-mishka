@@ -1,11 +1,35 @@
+.goods-week {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.goods-week__header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 26px 30px;
+  padding-bottom: 10px;
+}
+
+.goods-week__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 145px;
+  padding: 26px 30px;
+  padding-top: 12px;
+}
+
 .goods-week__title {
   margin: 0;
+  margin-bottom: 7px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
 }
 
 .goods-week__subtitle {
+  display: block;
   margin: 0;
   padding: 0;
   font-size: 17px;
@@ -14,8 +38,13 @@
   color: @lightgreen;
 }
 
+.goods-week__wrap {
+  position: relative;
+}
+
 .goods-week__content {
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 15px;
   font-weight: 400;
@@ -23,13 +52,144 @@
 }
 
 .goods-week__table {
-  .reset-styles()
+  .reset-styles();
+  height: 110px;/*-временно-*/
+  margin-bottom: 29px;
 }
 
-.goods-week__img {
+.goods-week__image {
+  width: 260px;
+  height: 315px;
+  margin: 0 auto;
+  padding: 0;
   background-color: #f1f1f1;
 }
 
+.goods-week__img {
+  width: 100%;
+}
+
+.goods-week__box {
+  position: absolute;
+  margin: 0 auto;
+  bottom: -445px;
+  text-align: center;
+}
+
 .goods-week__cost {
+  display: block;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
   color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .goods-week {
+    width: @tablet-width;
+  }
+
+  .goods-week__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 45px 50px 74px 50px;
+    padding-top: 34px;
+  }
+
+  .goods-week__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 50px 10px 50px;
+  }
+
+  .goods-week__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .goods-week__subtitle {
+    line-height: 17px;
+  }
+
+  .goods-week__wrap {
+    min-height: 404px;
+  }
+
+  .goods-week__content {
+    width: 334px;
+    margin-bottom: 44px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .goods-week__image {
+    width: 334px;
+    height: 404px;
+    margin: 0;
+  }
+
+  .goods-week__box {
+    bottom: 0;
+  }
+
+  .goods-week__cost {
+    font-size: 20px;
+  }
+
+  .goods-week__btn {
+    width: 292px;/*-временно-*/
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods-week {
+    width: 1050px;
+  }
+
+  .goods-week__wrapper {
+    align-items: flex-end;
+    padding-left: 170px;
+    padding-top: 74px;
+    padding-bottom: 95px;
+    padding-right: 0;
+  }
+
+  .goods-week__header {
+    position: absolute;
+    top: 79px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .goods-week__title {
+    width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .goods-week__subtitle {
+    width: 175px;
+  }
+
+  .goods-week__wrap {
+    min-height: 480px;
+    margin-right: 16px;
+  }
+
+  .goods-week__content {
+    margin-bottom: 57px;
+  }
+
+  .goods-week__image {
+    width: 525px;
+    height: 636px;
+  }
+
+  .goods-week__cost {
+    margin-bottom: 37px;
+  }
 }

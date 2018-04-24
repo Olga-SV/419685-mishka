@@ -1,5 +1,37 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+
+  &--sale,
+  &--delivery {
+    display: none;
+  }
+}
+
 .site-list__link {
+  position: relative;
+  display: block;
+  padding: 27px 30px 27px 75px;
+  border-bottom: 1px solid #ececec;
   color: @black;
+
+  &--delivery {
+    text-align: right;
+    font-weight: 400;
+    color: @gray;
+  }
+}
+
+.site-list__icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 31px;
+  top: 31px;
+
+  &--basket {
+    width: 21px;
+  }
 }
 
 .site-list__link[href]:hover,
@@ -9,4 +41,115 @@
 
 .site-list__link[href]:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 334px;
+
+    &--catalog {
+      padding-right: 31px;
+      order: 2;
+      font-size: 15px;
+    }
+
+    &--basket {
+      justify-content: flex-end;
+      width: 348px;
+      order: 1;
+      min-height: 87px;
+    }
+
+    &--delivery {
+      display: block;
+      order: 4;
+      font-size: 15px;
+    }
+
+    &--sale {
+      display: none;
+      order: 3;
+      font-size: 15px;
+    }
+
+    .site-list__link {
+      padding: 17px 0;
+      border: none;
+    }
+  }
+
+  .site-list--basket .site-list__link {
+    padding-left: 82px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    border-left: 1px solid #ececec;
+  }
+
+  .site-list__link {
+    &--search {
+      font-size: 0;
+    }
+  }
+
+  .site-list__icon {
+    left: 31px;
+
+    &--search {
+      top: 38px;
+    }
+
+    &--basket {
+      top: 35px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+
+    &--catalog {
+      justify-content: flex-start;
+      padding-right: 0;
+      order: 1;
+
+      li {
+        margin-right: 70px;
+      }
+
+      .site-list__link {
+        padding-top: 33px;
+        padding-bottom: 33px;
+        font-size: 17px;
+      }
+    }
+
+    &--basket {
+      justify-content: flex-end;
+    }
+
+    &--sale {
+      justify-content: flex-start;
+      display: flex;
+      order: 3;
+
+      li {
+        margin-right: 62px;
+      }
+    }
+
+    &--delivery {
+      justify-content: flex-end;
+    }
+  }
+
+  .site-list__link {
+    padding: 0;
+  }
 }
