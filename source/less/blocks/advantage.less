@@ -1,14 +1,131 @@
+.advantage {
+  width: 320px;
+  margin: 0 auto;
+  padding: 26px 30px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
 .advantage__title {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
 }
 
 .advantage__list {
+  display: flex;
+  flex-direction: column;
   .reset-styles()
 }
 
 .advantage__item {
+  margin-bottom: 27px;
   line-height: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--flower::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--money::before {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--heart::before {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--ball::before {
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--rocket::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-feature-gift.svg");
+  }
+}
+
+.advantage__item-text {
+  margin: 0;
+  margin-top: 19px;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage {
+    width: @tablet-width;
+    padding: 50px;
+    padding-bottom: 31px;
+  }
+
+  .advantage__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+
+  .advantage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantage__item {
+    width: 334px;
+    margin-bottom: 53px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &--flower {
+      order: 1;
+    }
+
+    &--money {
+      order: 3;
+    }
+
+    &--heart {
+      order: 5;
+    }
+
+    &--ball {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage {
+    padding: 60px 30px;
+    padding-bottom: 37px;
+  }
+
+  .advantage__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .advantage__item {
+    margin-right: 17px;
+  }
 }

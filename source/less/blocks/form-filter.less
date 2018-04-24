@@ -1,4 +1,6 @@
 .form-filter__title {
+  margin: 0;
+  padding: 0;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
@@ -8,4 +10,91 @@
 
 .form-filter__items {
   .reset-styles()
+}
+
+.form-filter__types {
+  margin-bottom: 28px;
+  height: 144px;
+  border: 1px solid red;
+  order: 1;
+}
+
+.form-filter__color {
+  margin-bottom: 28px;
+  height: 388px;
+  border: 1px solid green;
+  order: 2;
+}
+
+.form-filter__user {
+  margin-bottom: 28px;
+  height: 300px;
+  border: 1px solid blue;
+  order: 3;
+}
+
+.form-filter__contacts {
+  margin-bottom: 30px;
+  height: 185px;
+  border: 1px solid yellow;
+  order: 4;
+}
+
+.form-filter__comment {
+  margin-bottom: 17px;
+  height: 186px;
+  border: 1px solid lightgreen;
+  order: 5;
+}
+
+@media (min-width: @tablet-width) {
+  .form-filter__wrapper {
+    width: 100%;
+
+    &:nth-child(2n) {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .form-filter__types {
+    .form-filter-tablet ();
+    height: 182px;
+    background-color: white;
+  }
+
+  .form-filter__color {
+    .form-filter-tablet ();
+    height: 304px;
+  }
+
+  .form-filter__user {
+    .form-filter-tablet ();
+    height: 304px;
+  }
+
+  .form-filter__contacts {
+    .form-filter-tablet ();
+    height: 228px;
+  }
+
+  .form-filter__comment {
+    .form-filter-tablet ();
+    margin-bottom: 50px;
+    height: 193px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-filter__types,
+  .form-filter__color,
+  .form-filter__user,
+  .form-filter__contacts,
+  .form-filter__comment {
+    width: 1050px;
+    padding: 0;
+  }
+
+  .form-filter__color {
+    height: 228px;
+  }
 }

@@ -1,12 +1,23 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
   font-size: 19px;
   line-height: 18px;
 }
 
-.copyright__icon {
+.copyright__link {
+  display: block;
   color: @black;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-.copyright__icon:active {
-  color: rgba(0, 0, 0, 0.3);
+.copyright__icon-htmlacademy {
+  width: 27px;
+  height: 34px;
+  border: 1px solid red;
 }

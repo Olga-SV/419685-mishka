@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header class="page-header">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="85" height="35" alt="Логотип Mishka">
+        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
       </a>
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--opened">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" title="Вязание на заказ">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#" title="Поиск по сайту">Поиск по сайту</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#" title="Корзина: пока пуста">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-navigation__list site-list site-list--catalog">
+          <li>
+            <a class="site-list__link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
+          </li>
+          <li>
+            <a class="site-list__link" title="Вязание на заказ">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list site-list site-list--basket">
+          <li>
+            <a class="site-list__link site-list__link--search" href="#" title="Поиск по сайту">
+              <svg class="site-list__icon site-list__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="-0.8 -0.8 18 18" enable-background="new -0.8 -0.8 18 18" xml:space="preserve">
+                <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+              </svg>Поиск по сайту
+              </a>
+          </li>
+          <li>
+            <a class="site-list__link" href="#" title="Корзина: пока пуста">
+              <svg class="site-list__icon site-list__icon--basket" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="18px" viewBox="264.205 370.961 21 18" enable-background="new 264.205 370.961 21 18" xml:space="preserve">
+                <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+              </svg>Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list site-list site-list--sale">
+          <li>
+            <a class="site-list__link" href="#" title="Новые поступления">Новые поступления</a>
+          </li>
+          <li>
+            <a class="site-list__link" href="#" title="Распродажа">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-navigation__list site-list site-list--delivery">
+          <a class="site-list__link site-list__link--delivery" href="#" title="Бесплатная доставка по России">Бесплатная доставка по России</a>
+        </p>
       </nav>
-    </header>
-    <main class="page-main">
-      <section class="order-form">
-        <h1 class="page-main__title page-main__title--form">Вязание на заказ</h1>
-        <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="order-form__form form-filter" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form-filter__types">
+    </div>
+  </header>
+  <main class="page-main">
+    <h1 class="page-main__title page-main__title--form">Вязание на заказ</h1>
+    <section class="order-form">
+      <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="order-form__form form-filter" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form-filter__wrapper">
+          <section class="form-filter__types">
             <h2 class="form-filter__title">Тип</h2>
             <ul class="form-filter__items item-form">
               <li class="item-form__radio">
@@ -49,8 +73,10 @@
                 <label class="item-form__label" for="toy">Детская игрушка</label>
               </li>
             </ul>
-          </div>
-          <div class="form-filter__color">
+          </section>
+        </div>
+        <div class="form-filter__wrapper">
+          <section class="form-filter__color">
             <h2 class="form-filter__title">Цвет</h2>
             <ul class="form-filter__items item-form">
               <li class="item-form__checkbox">
@@ -78,8 +104,10 @@
                 <label class="item-form__label" for="color-orange">Оранжевый</label>
               </li>
             </ul>
-          </div>
-          <div class="form-filter__user">
+          </section>
+        </div>
+        <div class="form-filter__wrapper">
+          <section class="form-filter__user">
             <h1 class="visually-hidden">Представьтесь, пожалуйста</h1>
             <h2 class="form-filter__title">Фио</h2>
             <ul class="form-filter__items item-form">
@@ -96,70 +124,80 @@
                 <input class="item-form__input" type="text" id="your-patronymic" name="user-patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
+          </section>
+        </div>
+        <div class="form-filter__wrapper">
+          <div class="form-filter__contacts">
+            <section class="form-filter__tel">
+              <h2 class="form-filter__title">Тел</h2>
+              <div class="form-filter__items item-form">
+                <label class="visually-hidden" for="your-tel">Тел</label>
+                <input class="item-form__input" type="tel" id="your-tel" name="user-tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+              </div>
+            </section>
+            <section class="form-filter__email">
+              <h2 class="form-filter__title">E-mail</h2>
+              <div class="form-filter__items item-form">
+                <label class="visually-hidden" for="your-email">E-mail</label>
+                <input class="item-form__input" type="email" id="your-email" name="user-email" placeholder="Ваш Email*" required>
+              </div>
+            </section>
           </div>
-          <div class="form-filter__tel">
-            <h2 class="form-filter__title">Тел</h2>
-            <div class="form-filter__items item-form">
-              <label class="visually-hidden" for="your-tel">Тел</label>
-              <input class="item-form__input" type="tel" id="your-tel" name="user-tel" placeholder="+7 ХХХ ХХ ХХ*" required>
-            </div>
-          </div>
-          <div class="form-filter__email">
-            <h2 class="form-filter__title">E-mail</h2>
-            <div class="form-filter__items item-form">
-              <label class="visually-hidden" for="your-email">E-mail</label>
-              <input class="item-form__input" type="email" id="your-email" name="user-email" placeholder="Ваш Email*" required>
-            </div>
-          </div>
-          <div class="form-filter__comment">
+        </div>
+        <div class="form-filter__wrapper">
+          <section class="form-filter__comment">
             <h2 class="form-filter__title">Доп</h2>
             <div class="form-filter__items item-form">
-              <textarea class="item-form__input item-form__input-textarea" name="text-review" id="text-review" rows="7" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="item-form__input item-form__input-textarea" name="text-review" id="text-review" rows="7" cols="27" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
-          </div>
-        </form>
-        <div class="order-form__bottom">
-          <small class="order-form__required">*Поля обязательны для заполнения</small>
-          <button class="button order-form__btn" type="submit">Отправить заказ</button>
+          </section>
         </div>
-      </section>
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__logo">
-          <a class="page-footer__logo-icon" href="#" title="Логотип Mishka">
-            <img class="page-footer__logo-image" src="http://placehold.it/86x35" width="85" height="35" alt="Логотип Mishka">
-          </a>
-        </div>
-        <section class="page-footer__social">
-          <ul class="page-footer__list social">
-            <li class="social__item">
-              <a class="social__icon" href="#" title="Инстаграм">
-                <span class="visually-hidden">Мы в Инстаграме</span>
-                <svg class="social__icon-instagram" width="22" height="21">
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__icon" href="#" title="Фейсбук">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg class="social__icon-facebook" width="15" height="28">
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__icon" href="#" title="Твиттер">
-                <span class="visually-hidden">Мы в Твиттере</span>
-                <svg class="social__icon-twitter" width="23" height="20">
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <p class="page-footer__copyright copyright">
-          <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">Разработано</a>
-        </p>
+      </form>
+      <div class="order-form__bottom">
+        <small class="order-form__required">*Поля обязательны для заполнения</small>
+        <button class="button order-form__btn" type="submit">Отправить заказ</button>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo">
+        <a class="page-footer__logo-icon" href="#" title="Логотип Mishka">
+          <img class="page-footer__logo-image" src="http://placehold.it/86x35" width="85" height="35" alt="Логотип Mishka">
+        </a>
+      </div>
+      <section class="page-footer__social">
+        <ul class="page-footer__list social">
+          <li class="social__item">
+            <a class="social__icon" href="#" title="Инстаграм">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg class="social__icon-instagram" width="22" height="21">
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon" href="#" title="Фейсбук">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="social__icon-facebook" width="15" height="28">
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__icon" href="#" title="Твиттер">
+              <span class="visually-hidden">Мы в Твиттере</span>
+              <svg class="social__icon-twitter" width="23" height="20">
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <p class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработано HTML Academy">Разработано</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Логотип HTML Academy">
+          <svg class="copyright__icon-htmlacademy"></svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
 </html>

@@ -1,10 +1,24 @@
+.order-form {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-top: 23px;
+  padding-right: 30px;
+  padding-bottom: 55px;
+}
+
 .order-form__text {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
   font-size: 13px;
   font-weight: 400;
   color: @gray;
 }
 
 .order-form__required {
+  display: block;
+  margin-bottom: 31px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -13,4 +27,60 @@
 
 .order-form__btn {
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    width: 100%;
+    padding: 0;
+    padding-top: 77px;
+    padding-bottom: 31px;
+  }
+
+  .order-form__text {
+    width: 768px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .order-form__btn {
+    width: 230px;
+    margin-left: 0;
+  }
+
+  .order-form__required {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form {
+    padding-top: 120px;
+    padding-bottom: 26px;
+  }
+
+  .order-form__text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .order-form__bottom {
+    width: 700px;
+    padding: 0;
+  }
 }
