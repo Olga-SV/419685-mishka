@@ -2,22 +2,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 35px;
+  flex-wrap: wrap;
+  width: 184px;
+  .reset-indent-text ();
+  padding-bottom: 23px;
   font-size: 19px;
   line-height: 18px;
+
+  &:hover svg,
+  &:focus svg {
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__link {
   display: block;
   color: @black;
 
-  &:active {
-    color: rgba(0, 0, 0, 0.3);
+  svg {
+    width: 27px;
+    height: 34px;
   }
 }
 
-.copyright__icon-htmlacademy {
-  width: 27px;
-  height: 34px;
-  border: 1px solid red;
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 182px;
+    padding: 0;
+  }
 }

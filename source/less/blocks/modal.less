@@ -1,43 +1,125 @@
 .modal {
-  display: none;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: @white;
   text-align: center;
-  color: @gray;
+  color: @black;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  z-index: 10000;
 }
 
 .modal__title {
-  margin: 0;
-  padding: 0;
+  .reset-indent-text ();
+  margin-bottom: 10px;
+  padding-right: 48px;
+  padding-left: 48px;
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
 .modal__subtitle {
-  margin: 0;
-  padding: 0;
+  .reset-indent-text ();
+  margin-bottom: 25px;
+  padding-left: 24px;
+  padding-right: 24px;
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
 }
 
+.modal__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal__item {
+  margin-bottom: 30px;
+}
+
 .modal__label {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 52px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: @white;
+  border: 2px solid rgba(68, 68, 68, 0.1);
   line-height: 16px;
+  color: @gray;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border-color: #62d1ba;
+  }
+}
+
+.modal__input:checked + .modal__label {
+  border-color: @lightgreen;
 }
 
 .modal__button {
+  margin-bottom: 45px;
   background-color: @lightgreen;
   line-height: 16px;
   color: @white;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #59d5bc;
+  }
+
+  &:active {
+    background-color: #59d5bc;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
-.modal__button:hover,
-.modal__button:focus {
-  background-color: #59d5bc;
-}
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 566px;
+    padding-left: 105px;
+    padding-right: 105px;
+  }
 
-.modal__button:active {
-  color: rgba(255, 255, 255, 0.3);
+  .modal__title {
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__subtitle {
+    margin-bottom: 22px;
+    font-size: 17px;
+  }
+
+  .modal__button {
+    width: 350px;
+    line-height: 16px;
+  }
+
+  .modal__label {
+    width: 112px;
+  }
 }

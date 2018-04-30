@@ -1,6 +1,51 @@
 .product-detail {
+  /*position: relative;*/
+  min-height: 109px;
+  margin-bottom: 27px;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
   color: @gray;
+}
+
+.product-detail__row {
+  position: relative;
+  width: 260px;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 30px;
+  margin-bottom: 9px;
+  border-bottom: 1px solid #ececec;
+  overflow: hidden;
+}
+
+/*----------разобраться с выпаданием текста из строки-------------*/
+
+.product-detail__column-1 {
+  width: 85px;
+  .reset-indent-text ();
+  margin-right: 18px;
+  padding-bottom: 11px;
+  padding-right: 15px;
+}
+
+.product-detail__column-2 {
+  width: 175px;
+  .reset-indent-text ();
+  padding-bottom: 11px;
+  padding-right: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .product-detail {
+    /*margin-bottom: 55px;*/
+  }
+
+  .product-detail__row {
+    width: 298px;
+  }
+
+  .product-detail__column-1 {
+    margin-right: 11px;
+  }
 }
