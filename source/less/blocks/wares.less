@@ -1,14 +1,12 @@
 .wares {
   margin: 0 auto;
-}
-
-.wares__image {
+  border-top: 1px solid #e7e7e7;
   width: 100%;
-  height: 373px;
+  min-height: 373px;
   background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center -17px;
+  background-position: center top;
   background-size: auto;
   text-align: center;
 }
@@ -17,12 +15,37 @@
   display: flex;
   flex-direction: column;
   .reset-styles();
-  margin-top: -90px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .wares__item {
-  padding: 0 30px;
-  min-height: 103px;/*--временно для сетки---*/
+  min-height: 104px;
+}
+
+.wares__link {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 26px;
+  padding-right: 184px;
+  padding-bottom: 30px;
+  color: @white;
+  font-size: 19px;
+  text-align: left;
+
+  &:hover {
+    padding-top: 21px;
+    padding-bottom: 40px;
+
+    .wares__icon {
+      top: 45%;
+    }
+  }
 
   &--interior {
     background-color: @lightgreen;
@@ -41,25 +64,37 @@
   &--toy:focus {
     background-color: #46c1ae;
   }
-}
-
-.wares__link {
-  display: block;
-  color: @white;
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
 }
 
-.wares__subtitle {
-  margin: 0;
-  padding: 0;
-  font-size: 19px;
+.wares__icon {
+  position: absolute;
+  top: 50%;
+
+  path {
+    fill: #149080;
+  }
+
+  &--interior {
+    right: 35px;
+    width: 40px;
+    height: 62px;
+    margin-top: -32px;
+  }
+
+  &--toy {
+    right: 27px;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .wares__image {
+  .wares {
     height: 746px;
     background-size: cover;
   }
@@ -68,23 +103,36 @@
     flex-direction: row;
     width: 668px;
     margin: 0 auto;
-    margin-top: -119px;
   }
 
   .wares__item {
     width: 334px;
-    min-height: 119px;/*--временно для сетки---*/
+  }
+
+  .wares__link {
+    padding-left: 34px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .wares__icon {
+    &--toy {
+      right: 34px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .wares__image {
-    background-size: contain;
+  .wares {
+    border-top: none;
   }
 
   .wares__list {
     width: 1050px;
-    margin-top: -119px;
+  }
+
+  .wares__link {
+    padding-right: 350px;
   }
 
   .wares__item {

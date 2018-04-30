@@ -1,100 +1,182 @@
+.form-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-filter__tel,
+.form-filter__email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-filter__wrapper {
+  background-color: @white;
+}
+
+.form-filter__content {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .form-filter__title {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  .reset-indent-text ();
+  margin-bottom: 25px;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
   text-transform: uppercase;
   color: @lightgreen;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: "";
+    width: 198px;
+    height: 1px;
+    background-color: @lightgreen;
+  }
+
+  &--contacts {
+    margin-bottom: 6px;
+  }
+}
+
+.form-filter__email .form-filter__title::after {
+  width: 179px;
 }
 
 .form-filter__items {
-  .reset-styles()
-}
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .reset-styles();
+  margin-bottom: 12px;
 
-.form-filter__types {
-  margin-bottom: 28px;
-  height: 144px;
-  border: 1px solid red;
-  order: 1;
-}
+  &--types {
+    min-height: 101px;
+  }
 
-.form-filter__color {
-  margin-bottom: 28px;
-  height: 388px;
-  border: 1px solid green;
-  order: 2;
-}
+  &--color {
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    min-height: 344px;
+  }
 
-.form-filter__user {
-  margin-bottom: 28px;
-  height: 300px;
-  border: 1px solid blue;
-  order: 3;
-}
+  &--contacts {
+    position: relative;
+    margin-bottom: 15px;
+  }
 
-.form-filter__contacts {
-  margin-bottom: 30px;
-  height: 185px;
-  border: 1px solid yellow;
-  order: 4;
-}
-
-.form-filter__comment {
-  margin-bottom: 17px;
-  height: 186px;
-  border: 1px solid lightgreen;
-  order: 5;
+  &--comment {
+    margin-bottom: 16px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .form-filter__wrapper {
-    width: 100%;
-
     &:nth-child(2n) {
       background-color: #f1f1f1;
     }
   }
 
-  .form-filter__types {
+  .form-filter__content {
     .form-filter-tablet ();
-    height: 182px;
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+    &--color {
+      padding-bottom: 30px;
+    }
+
+    &--contacts {
+      flex-direction: column;
+      padding-bottom: 28px;
+    }
+
+    &--user {
+      padding-bottom: 24px;
+    }
+
+    &--comment {
+      padding-bottom: 24px;
+    }
   }
 
-  .form-filter__color {
-    .form-filter-tablet ();
-    height: 304px;
+  .form-filter__tel,
+  .form-filter__email {
+    flex-direction: row;
+    justify-content: stretch;
   }
 
-  .form-filter__user {
-    .form-filter-tablet ();
-    height: 304px;
+  .form-filter__title {
+    width: 167px;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 95px;
+    padding-right: 100px;
+
+    &::after {
+      display: none;
+    }
+
+    &--contacts {
+      padding-right: 0;
+      margin-bottom: 0;
+    }
   }
 
-  .form-filter__contacts {
-    .form-filter-tablet ();
-    height: 228px;
+  .form-filter__items {
+    width: 501px;
+    min-height: 127px;
+    margin-bottom: 0;
+
+    &--contacts {
+      min-height: 75px;
+    }
   }
 
-  .form-filter__comment {
-    .form-filter-tablet ();
-    margin-bottom: 50px;
-    height: 193px;
+  .form-filter__email .form-filter__title::after {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form-filter__types,
-  .form-filter__color,
-  .form-filter__user,
-  .form-filter__contacts,
-  .form-filter__comment {
-    width: 1050px;
-    padding: 0;
+  .form-filter__content {
+    width: 1150px;
+
+    &--user,
+    &--contacts {
+      justify-content: flex-start;
+    }
+
+    &--contacts {
+      padding-bottom: 24px;
+    }
   }
 
-  .form-filter__color {
-    height: 228px;
+  .form-filter__title {
+    width: 175px;
+    padding-left: 63px;
+    padding-right: 0;
+  }
+
+  .form-filter__items {
+    width: 875px;
+
+    &--user,
+    &--contacts {
+      width: 700px;
+    }
   }
 }

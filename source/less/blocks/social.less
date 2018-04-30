@@ -1,15 +1,37 @@
 .social {
   display: flex;
-  width: 145px;
+  width: 142px;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  padding: 0;
 }
 
-.social__item {
-  width: 25px;
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
   height: 30px;
-  border: 1px solid red;
+  background-color: transparent;
 }
 
 .social__icon {
-  color: @black;
+  &:hover,
+  &:focus {
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin-bottom: 0;
+  }
 }
