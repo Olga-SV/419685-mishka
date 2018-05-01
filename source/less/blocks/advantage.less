@@ -1,4 +1,5 @@
 .advantage {
+  position: relative;
   .mobile-center ();
   margin-bottom: 10px;
   padding-left: 30px;
@@ -144,16 +145,22 @@
 
 @media (min-width: @desktop-width) {
   .advantage {
-    width: 700px;
+    width: 1050px;
     margin-bottom: 32px;
     padding: 0;
   }
 
   .advantage__title {
+    padding-left: 168px;
     padding-top: 58px;
     padding-bottom: 32px;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .advantage__list {
+    width: 700px;
+    margin: 0 auto;
   }
 
   .advantage__item {
