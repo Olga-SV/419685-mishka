@@ -11,7 +11,11 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="../img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+        </picture>
       </a>
       <nav class="main-navigation main-navigation--opened">
         <button class="main-navigation__toggle" type="button">
@@ -107,7 +111,11 @@
             </ul>
           </div>
           <p class="goods-week__image">
-            <img class="goods-week__img" src="../img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="../img/triple-set-desktop@1x.jpg 1x, ../img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/triple-set-tablet@1x.jpg 1x, ../img/triple-set-tablet@2x.jpg 2x">
+              <img class="goods-week__img" src="../img/triple-set-mobile@1x.jpg" src="../img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            </picture>
           </p>
         </div>
         <div class="goods-week__box">
@@ -188,7 +196,7 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
         <a class="page-footer__logo-icon" href="#" title="Логотип Mishka">
-          <img class="page-footer__logo-image" src="http://placehold.it/102x34" width="102" height="34" alt="Логотип Mishka">
+          <img class="page-footer__logo-image" src="../img/logo-mobile.svg" width="102" height="34" alt="Логотип Mishka">
         </a>
       </div>
       <section class="page-footer__social">

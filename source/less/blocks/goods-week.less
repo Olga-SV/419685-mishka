@@ -2,6 +2,17 @@
   position: relative;
   .mobile-center ();
   margin-bottom: 170px;
+
+  &::after {
+    position: absolute;
+    bottom: -168px;
+    content: "";
+    width: 320px;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: 50%;
+    background-size: contain;
+  }
 }
 
 .goods-week__center {
@@ -86,6 +97,24 @@
   .goods-week {
     width: 768px;
     margin-bottom: 68px;
+
+    &::before {
+      position: absolute;
+      top: -11px;
+      content: "";
+      width: 768px;
+      height: 22px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      background-position-x: center;
+    }
+
+    &::after {
+      bottom: -70px;
+      width: 768px;
+      height: 15px;
+      background-position: 27px;
+    }
   }
 
   .goods-week__center {
@@ -165,14 +194,31 @@
 
 @media (min-width: @desktop-width) {
   .goods-week {
-    width: 1050px;
+    width: 1150px;
     margin-bottom: 94px;
+
+    &::before {
+      top: -17px;
+      width: 1150px;
+      height: 37px;
+      background-position: 18px;
+      background-size: 109%;
+    }
+
+    &::after {
+      bottom: -89px;
+      left: 50px;
+      width: 1052px;
+      height: 21px;
+    }
   }
 
   .goods-week__center {
     width: 100%;
     padding: 0;
     padding-top: 65px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .goods-week__header {
@@ -213,6 +259,6 @@
   }
 
   .goods-week__box {
-    left: 175px;
+    left: 225px;
   }
 }
