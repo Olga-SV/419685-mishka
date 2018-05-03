@@ -4,12 +4,13 @@
 }
 
 .page-main__title {
+  position: relative;
   width: 320px;
   margin: 0 auto;
+  padding-bottom: 121px;
   padding-left: 36px;
   padding-right: 36px;
   padding-top: 70px;
-  padding-bottom: 121px;
   text-align: center;
   font-size: 27px;
   line-height: 30px;
@@ -39,18 +40,39 @@
 
   .page-main__title {
     width: 768px;
+    padding-bottom: 373px;
     padding-left: 134px;
     padding-right: 134px;
     padding-top: 153px;
-    padding-bottom: 376px;
     font-size: 43px;
     line-height: 50px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -128px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: auto 23px;
+      z-index: 100;
+    }
 
     &--form,
     &--catalog {
       width: 100%;
       padding-top: 94px;
       padding-bottom: 80px;
+
+      &::after {
+        left: 50%;
+        bottom: -13px;
+        width: 768px;
+        margin-left: -384px;
+      }
     }
 
     &--catalog {
@@ -62,15 +84,29 @@
 @media (min-width: @desktop-width) {
   .page-main__title {
     width: 1150px;
-    padding-bottom: 362px;
+    padding-bottom: 360px;
     font-size: 53px;
     line-height: 57px;
     border-top: 1px solid #e7e7e7;
+
+    &::after {
+      bottom: -134px;
+      width: 100%;
+      height: 36px;
+      background-size: auto 37px;
+    }
 
     &--form,
     &--catalog {
       width: 100%;
       padding-bottom: 103px;
+
+      &::after {
+        bottom: -21px;
+        width: 1150px;
+        margin-left: -575px;
+        background-size: auto 34px;
+      }
     }
 
     &--catalog {
