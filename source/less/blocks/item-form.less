@@ -151,7 +151,14 @@
   top: 11px;
   right: 8px;
   .reset-indent-text ();
-  opacity: 0.2;
+  fill: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: #62d1ba;
+  }
 
   &--tel {
     width: 25px;
@@ -162,7 +169,7 @@
     right: 5px;
     width: 32px;
     height: 21px;
-  }/*-------------------------доделать поведения---------------*/
+  }
 }
 
 @media (min-width: @tablet-width) {

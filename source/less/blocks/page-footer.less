@@ -11,21 +11,33 @@
   flex-wrap: wrap;
   .mobile-center ();
   padding-left: 30px;
-  padding-top: 25px;
+  padding-top: 24px;
   padding-right: 30px;
 }
 
 .page-footer__logo {
   display: none;
-  width: 102px;
-  height: 34px;
   cursor: pointer;
 }
 
 .page-footer__logo-icon {
   display: block;
   width: 102px;
-  height: 34px;
+  height: 45px;
+}
+
+.page-footer__logo-icon svg {
+  fill: @black;
+
+
+  &:hover,
+  &:focus {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__social {
@@ -42,7 +54,7 @@
   .page-footer__wrapper {
     flex-direction: row;
     .form-filter-tablet ();
-    padding-top: 55px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 

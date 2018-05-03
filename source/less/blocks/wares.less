@@ -1,4 +1,5 @@
 .wares {
+  position: relative;
   margin: 0 auto;
   border-top: 1px solid #e7e7e7;
   width: 100%;
@@ -18,13 +19,10 @@
 .wares__list {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   .reset-styles();
   width: 320px;
   margin: 0 auto;
-}
-
-.wares__item {
-  min-height: 104px;
 }
 
 .wares__link {
@@ -34,22 +32,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 103px;
   padding-left: 30px;
   padding-top: 26px;
   padding-right: 184px;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
   color: @white;
   font-size: 19px;
   text-align: left;
-
-  &:hover {
-    padding-top: 21px;
-    padding-bottom: 40px;
-
-    .wares__icon {
-      top: 45%;
-    }
-  }
 
   &--interior {
     background-color: @lightgreen;
@@ -77,16 +67,22 @@
 .wares__icon {
   position: absolute;
   top: 50%;
+  fill: #149080;
 
-  path {
-    fill: #149080;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   &--interior {
     right: 35px;
     width: 40px;
     height: 62px;
-    margin-top: -32px;
+    margin-top: -30px;
   }
 
   &--toy {
@@ -99,7 +95,6 @@
 
 @media (min-width: @tablet-width) {
   .wares {
-    height: 746px;
     background-image: url("../img/hero-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -120,8 +115,13 @@
 
   .wares__link {
     padding-left: 34px;
+    padding-bottom: 33px;
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      bottom: 5px;
+    }
   }
 
   .wares__icon {
