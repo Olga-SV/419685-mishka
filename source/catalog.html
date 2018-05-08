@@ -5,10 +5,13 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <svg style="display: none">
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <!--<svg style="display: none">
     <symbol viewBox="-0.8 -0.8 18 18" id="icon-search">
       <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
     </symbol>
@@ -35,7 +38,7 @@
         <path d="M48.771,25.176c0.526-0.051,1.055-0.229,1.49-0.529c0.087-0.073,0.173-0.146,0.26-0.219 c0.524-0.338,0.979-0.834,0.734-1.373c-0.509-1.115-0.428-2.251-0.42-3.445c0.007-0.966-0.972-1.257-1.797-1.185 c-0.729,0.064-2.188,0.586-2.194,1.534c-0.007,1.002-0.072,2.034,0.11,3.02c-0.049,0.113-0.075,0.241-0.105,0.358 c-0.056,0.214,0.016,0.424,0.144,0.595c0,0.045,0.002,0.09,0.002,0.135c0.005,0.113,0.011,0.226,0.015,0.338 c0.074,0.235,0.218,0.413,0.433,0.535C47.833,25.176,48.327,25.219,48.771,25.176z"/>
       </g>
     </symbol>
-  </svg>
+  </svg>!-->
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html" title="Вернуться на главную страницу">
@@ -93,9 +96,6 @@
       <article class="catalog__product">
         <a class="catalog__link-img" href="#" title="Зайчик-попрыгайчик">
           <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="../img/photo-hare-desktop@1x.webp 1x, ../img/photo-hare-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="../img/photo-hare-tablet@1x.webp 1x, ../img/photo-hare-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="../img/photo-hare-mobile@1x.webp" src="../img/photo-hare-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="../img/photo-hare-desktop@1x.jpg 1x, ../img/photo-hare-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="../img/photo-hare-tablet@1x.jpg 1x, ../img/photo-hare-tablet@2x.jpg 2x">
             <img src="../img/photo-hare-mobile@1x.jpg" src="../img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
@@ -120,9 +120,6 @@
       <article class="catalog__product">
         <a class="catalog__link-img" href="#" title="Корзинка для белья">
           <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="../img/photo-bowl-desktop@1x.webp 1x, ../img/photo-bowl-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="../img/photo-bowl-tablet@1x.webp 1x, ../img/photo-bowl-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="../img/photo-bowl-mobile@1x.webp" src="../img/photo-bowl-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="../img/photo-bowl-desktop@1x.jpg 1x, ../img/photo-bowl-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="../img/photo-bowl-tablet@1x.jpg 1x, ../img/photo-bowl-tablet@2x.jpg 2x">
             <img src="../img/photo-bowl-mobile@1x.jpg" src="../img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
@@ -147,9 +144,6 @@
       <article class="catalog__product">
         <a class="catalog__link-img" href="#" title="Большая корзинка для игрушек">
           <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="../img/photo-toys-desktop@1x.webp 1x, ../img/photo-toys-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="../img/photo-toys-tablet@1x.webp 1x, ../img/photo-toys-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="../img/photo-toys-mobile@1x.webp" src="../img/photo-toys-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="../img/photo-toys-desktop@1x.jpg 1x, ../img/photo-toys-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="../img/photo-toys-tablet@1x.jpg 1x, ../img/photo-toys-tablet@2x.jpg 2x">
             <img src="../img/photo-toys-mobile@1x.jpg" src="../img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
