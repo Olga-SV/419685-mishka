@@ -18,7 +18,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     clean: {
       build: ["build"]
     },
@@ -29,7 +28,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     postcss: {
       style: {
         options: {
@@ -40,7 +38,6 @@ module.exports = function (grunt) {
         src: "build/css/*.css"
       }
     },
-
     csso: {
       style: {
         options: {
@@ -51,7 +48,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     svgstore: {
       options: {
         includeTitleElement: false
@@ -62,7 +58,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     posthtml: {
       options: {
         use: [
@@ -77,7 +72,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     imagemin: {
       images: {
         options: {
@@ -90,7 +84,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     cwebp: {
       images: {
         options: {
@@ -109,11 +102,10 @@ module.exports = function (grunt) {
         },
         options: {
           server: "build/",
-          wathTask: true
+          watchTask: true
         }
       }
     },
-
     watch: {
       html: {
         files: ["source/*.html"],
@@ -127,7 +119,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
-
   grunt.registerTask("build", [
     "clean",
     "copy",
