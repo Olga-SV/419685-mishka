@@ -44,8 +44,15 @@
   }
 }
 
-.site-list__link[href]:hover,
-  .site-list__link[href]:focus {
+.site-list__link[href]:hover {
+  color: rgba(0, 0, 0, 0.6);
+
+  .site-list__icon {
+    fill: @lightgreen;
+  }
+}
+
+.site-list__link[href]:focus {
   color: rgba(0, 0, 0, 0.6);
 
   .site-list__icon {
