@@ -11,13 +11,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
-}
-
-.video__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #ededed;
 
   &:hover,
   &:focus {
@@ -27,6 +20,13 @@
   &:active {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
+}
+
+.video__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ededed;
 }
 
 .video__title {
@@ -72,6 +72,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  right: 50%;
   width: 101px;
   height: 77px;
   margin-top: -39px;
@@ -80,17 +81,11 @@
 
   &:hover,
   &:focus {
-    width: 122px;
-    height: 93px;
-    margin-top: -47px;
-    margin-left: -61px;
+    transform: scale(1.2);
   }
 
   &:active {
-    width: 81px;
-    height: 62px;
-    margin-top: -31px;
-    margin-left: -41px;
+    transform: scale(0.8);
     opacity: 0.3;
   }
 }
