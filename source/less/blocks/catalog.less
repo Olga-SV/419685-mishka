@@ -6,6 +6,15 @@
 
 .catalog__product {
   margin-bottom: 31px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog__link-img {
@@ -23,15 +32,6 @@
   padding-top: 27px;
   background-color: @white;
   border: 1px solid #ececec;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  &:active {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
 }
 
 .catalog__product-name {

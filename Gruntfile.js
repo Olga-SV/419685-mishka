@@ -67,8 +67,9 @@ module.exports = function (grunt) {
       html: {
         files: [{
           expand: true,
-          src: ["source/*.html"],
-          dest: "build"
+          cwd: "source",
+          src: ["*.html"],
+          dest: "build/"
         }]
       }
     },
