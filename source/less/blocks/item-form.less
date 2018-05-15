@@ -1,17 +1,18 @@
 .item-form__radio {
   position: relative;
-  min-height: 51px;
-  margin-bottom: 8px;
 }
 
 .item-form__label {
   position: relative;
-  display: block;
-  padding-left: 61px;
-  padding-top: 10px;
-  padding-right: 40px;
+  display: flex;
+  /*align-items: center;*/
+  min-height: 40px;
+  margin-bottom: 21px;
+  margin-left: 63px;
+  padding-top: 11px;
   line-height: 18px;
   cursor: pointer;
+  word-break: break-word;
 
   &:hover::before,
   &:focus::before {
@@ -32,18 +33,19 @@
 
   &--radio {
     &::before {
-      left: 0;
-      top: 0;
+      left: -60px;
+      top: 50%;
       width: 38px;
       height: 38px;
+      margin-top: -19px;
       background-color: transparent;
       border: 2px solid @gray;
       border-radius: 50%;
     }
 
     &::after {
-      left: 12px;
-      top: 19px;
+      left: -49px;
+      top: 50%;
       width: 15px;
       height: 15px;
       margin-top: -7px;
@@ -53,26 +55,23 @@
     }
   }
 
-  &--color {
-    margin-bottom: 23px;
-    padding-bottom: 10px;
-  }
-
   &--color::before {
-    left: 0;
-    top: 0;
-    width: 38px;
-    height: 38px;
+    left: -63px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
     background-color: transparent;
     border: 2px solid @gray;
     border-radius: 0;
   }
 
   &--color::after {
-    left: 9px;
-    top: 12px;
+    left: -54px;
+    top: 50%;
     width: 22px;
     height: 10px;
+    margin-top: -8px;
     border: 2px solid @gray;
     border-top: none;
     border-right: none;
@@ -95,7 +94,7 @@
 }
 
 .item-form__checkbox {
-  min-height: 39px;
+  position: relative;
 }
 
 .item-form__user {
@@ -107,8 +106,9 @@
 
 .item-form__input {
   display: block;
-  margin-bottom: 17px;
-  padding: 14px 50px 20px 2px;
+  width: 260px;
+  margin-bottom: 20px;
+  padding: 14px 50px 16px 2px;
   background-color: transparent;
   font-size: 17px;
   line-height: 18px;
@@ -134,10 +134,12 @@
     min-height: 143px;
     margin-bottom: 0;
     padding-left: 16px;
+    padding-right: 16px;
     background-color: @white;
     border: 2px solid @gray;
     border-bottom: 0;
     box-shadow: inset 0 -2px 0 0 black;
+    resize: none;
 
     &:hover,
     &:focus {
@@ -146,11 +148,40 @@
   }
 }
 
+::-webkit-input-placeholder { /*Chrome/Opera/Safari */
+  color: rgba(68, 68, 68, 0.3);
+  line-height: 18px;
+  border: none;
+}
+
+::-moz-placeholder { /*Firefox 19+ */
+  color: rgba(68, 68, 68, 0.3);
+  border: none;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(68, 68, 68, 0.3);
+  border: none;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(68, 68, 68, 0.3);
+  border: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
 .item-form__input-icon {
   position: absolute;
-  top: 11px;
+  top: 50%;
   right: 8px;
   .reset-indent-text ();
+  margin-top: -12px;
   fill: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 
@@ -166,7 +197,6 @@
   }
 
   &--email {
-    right: 5px;
     width: 32px;
     height: 21px;
   }
@@ -174,46 +204,54 @@
 
 @media (min-width: @tablet-width) {
   .item-form__label {
-    min-height: 52px;
-    padding-left: 80px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    min-height: 51px;
+    margin-left: 79px;
+    margin-bottom: 24px;
+    padding-top: 17px;
     font-size: 19px;
+    line-height: 18px;
 
-    &::before {
+    &--radio {
+      margin-right: 160px;
+    }
+
+    &--radio::before {
+      left: -78px;
       width: 51px;
       height: 51px;
+      margin-top: -25px;
+    }
+
+    &--radio::after {
+      left: -62px;
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+    }
+
+    &--color {
+      margin-right: 40px;
     }
 
     &--color::before {
+      left: -77px;
       width: 54px;
       height: 52px;
     }
 
-    &--color&::after {
-      left: 13px;
-      top: 15px;
+    &--color::after {
+      left: -67px;
       width: 32px;
       height: 15px;
     }
-
-    &::after {
-      left: 16px;
-      top: 23px;
-      width: 20px;
-      height: 20px;
-    }
-
-    &--user {
-      min-height: 77px;
-      margin-right: 0;
-      padding-left: 0;
-      padding-right: 26px;
-    }
   }
 
-  .item-form__radio {
-    margin-bottom: 0;
+  .item-form__label-user {
+    min-height: 77px;
+    margin-right: 25px;
+    padding-top: 14px;
+    font-size: 19px;
+    line-height: 18px;
   }
 
   .item-form__checkbox {
@@ -233,13 +271,33 @@
     flex-grow: 1;
     margin-bottom: 26px;
     padding-left: 14px;
-    padding-top: 10px;
+    padding-top: 0;
     padding-bottom: 13px;
     font-size: 19px;
+
+    &--textarea {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      border: 2px solid @gray;
+      border-bottom: 0;
+    }
+
+    &--user {
+      padding-top: 11px;
+    }
+
+    &--contacts {
+      flex-grow: 0;
+      width: 501px;
+      margin: 0;
+      padding: 17px;
+      padding-right: 65px;
+    }
   }
 
   .item-form__input-icon {
-    right: 26px;
+    right: 23px;
   }
 }
 
@@ -263,6 +321,8 @@
 
     &--textarea {
       width: 700px;
+      border: 2px solid @gray;
+      border-bottom: 0;
     }
   }
 }

@@ -1,26 +1,14 @@
 .reviews {
-  position: relative;
   .mobile-center ();
   margin-bottom: 50px;
-
-  &::after {
-    position: absolute;
-    bottom: -51px;
-    content: "";
-    width: 320px;
-    height: 6px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-position: 50%;
-    background-size: contain;
-  }
 }
 
 .reviews__wrapper {
-  .mobile-padding ();
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  .mobile-padding ();
   padding-top: 18px;
 }
 
@@ -31,11 +19,6 @@
   line-height: 30px;
 }
 
-.reviews__slider {
-  position: relative;
-  margin-bottom: 90px;
-}
-
 .reviews__slider-input {
   position: absolute;
   opacity: 0;
@@ -44,7 +27,7 @@
 .reviews__slider-controls {
   position: absolute;
   display: flex;
-  bottom: -52px;
+  bottom: 90px;
   text-align: center;
   z-index: 1000;
 }
@@ -70,16 +53,15 @@
 }
 
 .reviews__arrow-prev {
-  background-image: url("../img/icon-left-arrow.svg");
+  background-image: url("../img/left-arrow.svg");
 }
 
 .reviews__arrow-next {
-  background-image: url("../img/icon-right-arrow.svg");
+  background-image: url("../img/right-arrow.svg");
 }
 
-.reviews__slides {
-  width: 260px;
-  height: 383px;
+.reviews__slider {
+  margin-bottom: 90px;
   overflow: hidden;
 }
 
@@ -110,12 +92,12 @@
   .reviews {
     position: relative;
     width: 768px;
-    margin-bottom: 115px;
+    margin-bottom: 83px;
 
     &::before {
       position: absolute;
       display: block;
-      top: 0;
+      bottom: 0;
       left: 0;
       content: "";
       width: 350px;
@@ -130,13 +112,6 @@
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/review@2x.jpg");
       }
-    }
-
-    &::after {
-      bottom: -115px;
-      width: 768px;
-      height: 15px;
-      background-position: 27px;
     }
   }
 
@@ -164,8 +139,8 @@
   }
 
   .reviews__slider-controls {
-    bottom: 16px;
-    right: 0;
+    bottom: 48px;
+    right: 51px;
   }
 
   .reviews__arrow-prev,
@@ -182,11 +157,12 @@
   .reviews__btn {
     width: 175px;
     margin-right: 0;
+    margin-bottom: 47px;
     order: 2;
   }
 
   .reviews__slide-content {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     font-size: 17px;
   }
 
@@ -207,12 +183,6 @@
   .reviews {
     width: 1050px;
     margin-bottom: 90px;
-
-    &::after {
-      bottom: -89px;
-      width: 1052px;
-      height: 21px;
-    }
   }
 
   .reviews__wrapper {
@@ -238,6 +208,7 @@
 
   .reviews__slider-controls {
     bottom: 98px;
+    right: 0;
   }
 
   .reviews__slide-content {
