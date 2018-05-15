@@ -6,6 +6,54 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  display: none;
+  width: 21px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.page-header__navigation--closed .page-header__toggle {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #221f1f;
+  box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+}
+
+.page-header__navigation--opened .page-header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -3px;
+    width: 26px;
+    height: 3px;
+    background-color: #221f1f;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.page-header__list {
+  .reset-styles();
 }
 
 .page-header__logo {
@@ -31,33 +79,56 @@
   }
 }
 
+.page-header__delivery {
+  display: none;
+  .reset-indent-text ();
+  text-align: right;
+  font-weight: 400;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     width: 768px;
   }
 
   .page-header__wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     width: 100%;
     margin: 0 auto;
     padding-left: 50px;
     padding-right: 50px;
+    z-index: 50;
+  }
+
+  .page-header__delivery {
+    display: block;
+    width: 334px;
+    order: 4;
+    font-size: 15px;
   }
 
   .page-header__logo {
-    position: absolute;
-    top: 20px;
-    left: 50px;
     height: 46px;
+    margin-top: 22px;
+    margin-bottom: 20px;
     padding: 0;
     border: none;
+    order: 1;
   }
 
   .page-header__logo-image {
     width: 112px;
     height: 46px;
+  }
+
+  .page-header__navigation {
+    width: 334px;
+    order: 3;
+  }
+
+  .page-header__user {
+    width: 350px;
+    order: 2;
   }
 }
 
@@ -67,14 +138,30 @@
   }
 
   .page-header__logo {
-    left: 50%;
-    top: 9px;
+    width: 149px;
     height: 72px;
-    margin-left: -75px;
+    margin-top: 10px;
+    order: 2;
   }
 
   .page-header__logo-image {
     width: 149px;
     height: 72px;
+  }
+
+  .page-header__navigation {
+    width: 450px;
+    order: 1;
+  }
+
+  .page-header__user {
+    width: 450px;
+    order: 3;
+  }
+
+  .page-header__delivery {
+    position: absolute;
+    right: 50px;
+    bottom: 8px;
   }
 }

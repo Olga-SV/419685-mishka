@@ -7,13 +7,13 @@
   display: none;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 1500;
+
+  &--toning {
+    display: block;
+  }
 }
 
-.modal-toning {
-  display: block;
-}
-
-.modal-block {
+.modal__block {
   position: fixed;
   top: 40%;
   left: 0;
@@ -30,6 +30,12 @@
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   z-index: 10000;
+
+  &--show {
+    display: block;
+    animation-name: modal-animation;
+    animation-duration: 0.6s;
+  }
 }
 
 @keyframes modal-animation {
@@ -48,12 +54,6 @@
   100% {
     transform: translateY(0);
   }
-}
-
-.modal-show {
-  display: block;
-  animation-name: modal-animation;
-  animation-duration: 0.6s;
 }
 
 .modal__title {
@@ -137,7 +137,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .modal-block {
+  .modal__block {
     width: 566px;
     padding-left: 105px;
     padding-right: 105px;
