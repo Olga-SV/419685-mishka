@@ -104,6 +104,15 @@
   flex-wrap: wrap;
 }
 
+.item-form__input::placeholder {
+  color: rgba(68, 68, 68, 0.3);
+  line-height: 18px;
+}
+
+.item-form__input:-ms-input-placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
 .item-form__input {
   display: block;
   width: 260px;
@@ -147,12 +156,6 @@
       border-color: #62d1ba;
     }
   }
-}
-
-.item-form__input::placeholder {
-  color: green;/*rgba(68, 68, 68, 0.3);*/
-  line-height: 18px;
-  border: none;
 }
 
 .item-form__input-icon {

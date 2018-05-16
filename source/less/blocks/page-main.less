@@ -48,21 +48,6 @@
     font-size: 43px;
     line-height: 50px;
 
-    &::after {
-      position: absolute;
-      left: 50%;
-      bottom: -130px;
-      display: block;
-      content: "";
-      width: 768px;
-      height: 24px;
-      margin-left: -384px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-repeat: no-repeat;
-      background-size: auto 23px;
-      z-index: 100;
-    }
-
     &--form,
     &--catalog {
       width: 100%;
@@ -70,10 +55,18 @@
       padding-bottom: 80px;
 
       &::after {
+        position: absolute;
         left: 50%;
         bottom: -13px;
+        display: block;
+        content: "";
         width: 768px;
+        height: 24px;
         margin-left: -384px;
+        background-image: url("../img/bg-zigzag-fill.svg");
+        background-repeat: no-repeat;
+        background-size: auto 23px;
+        z-index: 100;
       }
     }
 
@@ -95,13 +88,6 @@
     line-height: 57px;
     border-top: 1px solid #e7e7e7;
 
-    &::after {
-      width: 1250px;
-      height: 36px;
-      margin-left: -625px;
-      background-size: auto 37px;
-    }
-
     &--form,
     &--catalog {
       width: 100%;
@@ -110,6 +96,7 @@
       &::after {
         bottom: -21px;
         width: 1150px;
+        height: 36px;
         margin-left: -575px;
         background-size: auto 34px;
       }
