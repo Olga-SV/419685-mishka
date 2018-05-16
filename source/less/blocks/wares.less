@@ -104,6 +104,21 @@
       background-image: url("../img/hero-tablet@2x.jpg");
       background-size: cover;
     }
+
+    &::after {
+      position: absolute;
+      left: 50%;
+      bottom: -9px;
+      display: block;
+      content: "";
+      width: 768px;
+      height: 24px;
+      margin-left: -384px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: auto 23px;
+      z-index: 100;
+    }
   }
 
   .wares__list {
@@ -142,6 +157,14 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
       background-size: contain;
+    }
+
+    &::after {
+      bottom: -15px;
+      width: 1250px;
+      height: 36px;
+      margin-left: -625px;
+      background-size: auto 37px;
     }
   }
 
